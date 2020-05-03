@@ -53,7 +53,7 @@ function checkInput() {
         if (snippetIdxArray.length === 0) {
             endGame();
         } else {
-            input.style.borderColor = "orange";
+            input.style.borderColor = "#d3d3be";
             let snippet = snippetIdxArray.shift();
             startRound(snippet);
         }
