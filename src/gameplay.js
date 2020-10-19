@@ -73,7 +73,6 @@ function reloadSnippets(n) {
 function startRound(i) {
     input.value = "";
     changeSnippet(i);
-    // input.addEventListener('keyup', checkInput, false);
 }
 
 function newGame() {
