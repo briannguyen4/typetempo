@@ -6,7 +6,7 @@ const playButton = document.querySelector("#play");
 const playArea = document.querySelector("#play-container");
 // const test = document.querySelector("#test");
 const resultContainer = document.getElementById("result-container");
-const playAgain = document.querySelector("#playagain");
+const playAgainButton = document.querySelector("#playagain");
 
 let countdown;
 let timeVals = [0, 0, 0, 0];
@@ -87,7 +87,6 @@ function startGame() {
     var c = 4;
 
     function myCountdown() {
-        playButton.innerHTML = c;
         playButton.innerHTML = --c;
         if (c == 0) {
             clearInterval(countdown);
@@ -99,16 +98,16 @@ function startGame() {
     }
 }
 
-function restartGame() {
+function playAgain() {
     newGame();
     countdown = setInterval(myCountdown, 1000);
     var c = 4;
 
     function myCountdown() {
-        playagain.innerHTML = c;
         playagain.innerHTML = --c;
         if (c == 0) {
             clearInterval(countdown);
+            playAgainButton.addEventListener('click', () => playAgain(), {once: true});
             playagain.innerHTML = "Play Again";
             resultContainer.style.display = "none";
             playArea.style.display = "flex";
@@ -155,5 +154,5 @@ function calculateWPM() {
 
 // test.addEventListener('click', () => endGame());
 playButton.addEventListener('click', () => startGame(), {once: true});
-playAgain.addEventListener('click', () => restartGame());
+playAgainButton.addEventListener('click', () => playAgain(), {once: true});
 
