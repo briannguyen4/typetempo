@@ -111,11 +111,6 @@ export const snippets = {
     },
 
     8: {
-        text: "Come on, vogue. Let your body go with the flow. You know you can do it.",
-        title: "Vogue"
-    },
-
-    8: {
         text: "I thought I saw a man brought to life. He was warm, he came around like he was dignified.",
         title: "Torn"
     },
@@ -144,6 +139,103 @@ export const snippets = {
         text: "I want something else to get me through this semi-charmed kind of life, baby, baby.",
         title: "Semi-Charmed Life"
     },
+
+    8: {
+        text: "I know that I can't take no more, it ain't no lie. I wanna see you out that door.",
+        title: "Bye Bye Bye"
+    },
+
+    8: {
+        text: "If you're havin' girl problems, I feel bad for you, son. I got 99 problems",
+        title: "99 Problems"
+    },
+
+    8: {
+        text: "Windmill, windmill for the land. Turn forever, hand in hand.",
+        title: "Feel Good Inc."
+    },
+
+    8: {
+        text: "Can't read my, can't read my, no, he can't read my poker face.",
+        title: "Poker Face"
+    },
+
+    8: {
+        text: "I am beautiful no matter what they say. Words can't bring me down.",
+        title: "Beautiful"
+    },
+
+    8: {
+        text: "But maybe I'm crazy, maybe you're crazy, maybe we're crazy, probably.",
+        title: "Crazy"
+    },
+
+    8: {
+        text: "'Cause your love's got the best of me and baby you're making a fool of me.",
+        title: "Crazy in Love"
+    },
+
+    8: {
+        text: "We are searchlights, we can see in the dark. We are rockets, pointed up at the stars.",
+        title: "What About Us?"
+    },
+
+    8: {
+        text: "I'm on the pursuit of happiness, and I know everything that shine ain't always gonna be gold.",
+        title: "Pursuit of Happiness"
+    },
+
+    8: {
+        text: "You better lose yourself in the music, the moment, you own it, you better never let it go, go.",
+        title: "Lose Yourself"
+    },
+
+    8: {
+        text: "I didn't get a lot in class but I know it don't come in a shot glass.",
+        title: "Rehab"
+    },
+
+    8: {
+        text: "I fly like paper, get high like planes. If you catch me at the border I got visas in my name.",
+        title: "Paper Planes"
+    },
+    
+    8: {
+        text: "I said, please don't slow me down if I'm going too fast. You're in a strange part of our town",
+        title: "Reptilia"
+    },
+    
+    8: {
+        text: `Last night, she said "Oh, baby, don't feel so down. Oh, it turns me off when I feel left out"`,
+        title: "Last Night"
+    },
+    
+    8: {
+        text: "Conversation got heavy. She had me feeling like she's ready to blow.",
+        title: "Yeah!"
+    },
+    
+    8: {
+        text: "Take control of your mind and meditate. Let your soul gravitate to the love, y'all.",
+        title: "Where Is the Love?"
+    },
+    
+    8: {
+        text: "Tonight's the night, let's live it up. I got my money, let's spend it up.",
+        title: "I Gotta Feeling"
+    },
+    
+    8: {
+        text: "Control yourself, take only what you need from it. A family of trees wanted to be haunted.",
+        title: "Kids"
+    },
+
+    8: {
+        text: "Some people want it all but I don't want nothing at all if it ain't you, baby.",
+        title: "If I Ain’t Got You"
+    },
+    
+    
 };
 
 export const getSnippetsIdx = (n) => {
