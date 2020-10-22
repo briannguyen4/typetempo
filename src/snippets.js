@@ -176,4 +176,3 @@ function getWordTotal(snippet) {
     let words = snippet.split(" ");
     return words.length;
 }
-
