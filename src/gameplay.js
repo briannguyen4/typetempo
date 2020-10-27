@@ -2,9 +2,9 @@ import {snippets, getSnippetsIdx, totalWords} from './snippets';
 const input = document.querySelector(".input");
 const timer = document.querySelector(".timer");
 const snippet = document.querySelector("#text-snippet");
+const start = document.querySelector("#start-container");
 const playButton = document.querySelector("#play");
 const playArea = document.querySelector("#play-container");
-// const test = document.querySelector("#test");
 const resultContainer = document.getElementById("result-container");
 const playAgainButton = document.querySelector("#playagain");
 
@@ -89,7 +89,9 @@ function startGame() {
         playButton.innerHTML = --c;
         if (c == 0) {
             clearInterval(countdown);
-            playButton.style.display = "none";
+            start.style.display = "none";
+            playArea.style.display = "block";
+            playArea.style.display = "block";
             startTimer();
             changeSnippet(snippetIdxArray.shift())
             input.addEventListener('keyup', checkInput, false);
@@ -151,7 +153,6 @@ function calculateWPM() {
    return wpm.toFixed(2);
 }
 
-// test.addEventListener('click', () => endGame());
 playButton.addEventListener('click', () => startGame(), {once: true});
 playAgainButton.addEventListener('click', () => playAgain(), {once: true});
 

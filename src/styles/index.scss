@@ -24,23 +24,23 @@ body {
   align-items: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   text-align: center;
-  height: 90px;
-  width: 480px;
+  height: 100%;
+  width: 28vw;
   background-color: rgb(63, 74, 139);
   color: rgba(245, 245, 260, 0.911);
   text-shadow: 1.1px 1.1px rgb(66, 155, 206);
   border: 2.2px solid rgb(163, 157, 187);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   border-radius: 15px;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #text-snippet {
@@ -65,30 +65,18 @@ body {
   box-shadow: none;
 }
 
-#play-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-  width: 600px;
-  background-color: rgb(228, 228, 205);
-  padding: 30px;
-  margin-top: 20px;
-  border: 3px solid rgba(173, 147, 147, 0.904);
-  border-radius: 10px;
-}
-
+#start-container,
+#play-container, 
 #result-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 250px;
-  width: 600px;
-  background-color: rgb(228, 228, 205);
-  padding: 30px;
+  width: 700px;
   margin-top: 20px;
+  padding: 30px;
+  background-color: rgb(228, 228, 205);
   border: 3px solid rgba(173, 147, 147, 0.904);
   border-radius: 10px;
 }
@@ -96,7 +84,7 @@ body {
 .input {
   background-color: transparent;
   margin-top: 2rem;
-  width: 100%;
+  width: 92%;
   height: 120px;
   font-size: 1rem;
   border: 2px solid #d3d3be;
