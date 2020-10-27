@@ -1,7 +1,9 @@
 body {
-  height: 98vh;
-  width: 98vw;
   margin: auto;
+  height: 97vh;
+  width: 97vw;
+  min-width: 760px;
+  min-height: 560px;
 }
 
 .game-body {
@@ -13,34 +15,48 @@ body {
 
 .game-title {
   font-family: 'Monoton', cursive;
-  font-size: 35px;
+  font-size: 32px;
   text-align: center;
-  margin: 0px 0;
 }
 
 #game-container {
+  margin: auto;
+  width: 85%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .header {
-  text-align: center;
-  height: 100%;
-  width: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16%;
+  width: 36%;
   background-color: rgb(63, 74, 139);
   color: rgba(245, 245, 260, 0.911);
   text-shadow: 1.1px 1.1px rgb(66, 155, 206);
   border: 2.2px solid rgb(163, 157, 187);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#start-container,
+#play-container, 
+#result-container {
+  height: 55%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgb(228, 228, 205);
+  border: 3px solid rgba(173, 147, 147, 0.904);
+  border-radius: 10px;
 }
 
 #text-snippet {
@@ -65,22 +81,6 @@ body {
   box-shadow: none;
 }
 
-#start-container,
-#play-container, 
-#result-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-  width: 700px;
-  margin-top: 20px;
-  padding: 30px;
-  background-color: rgb(228, 228, 205);
-  border: 3px solid rgba(173, 147, 147, 0.904);
-  border-radius: 10px;
-}
-
 .input {
   background-color: transparent;
   margin-top: 2rem;
@@ -93,16 +93,6 @@ body {
   resize: none;
   padding: .5rem 1rem;
   font-size: 20px;
-}
-
-.timer-container {
-  margin-top: 20px;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  letter-spacing: 3px;
-  border: 2px solid darkslateblue;
-  border-radius: 10px;
 }
 
 .results {
@@ -120,6 +110,19 @@ body {
 #info {
   color: rgb(97, 126, 109);
   text-shadow: 1.1px 1.1px rgb(162, 223, 187);
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11%;
+  height: 9%;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  border: 2px solid darkslateblue;
+  border-radius: 10px;
 }
 
 
