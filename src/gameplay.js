@@ -7,12 +7,38 @@ const playButton = document.querySelector("#play");
 const playArea = document.querySelector("#play-container");
 const resultContainer = document.getElementById("result-container");
 const playAgainButton = document.querySelector("#playagain");
+const header = document.querySelector(".header-text");
 
 let countdown;
 let timeVals = [0, 0, 0, 0];
 let time;
 let snippetIdxArray;
 let wordTotal;
+
+const splitText = header.textContent.split("");
+header.textContent = "";
+
+for (let i = 0; i < splitText.length; i++) {
+    header.innerHTML += "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0;
+let textTimer = setInterval(onTick, 55); 
+
+function onTick() { 
+    if (char < splitText.length) {
+        const span = header.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++;
+    } else {
+        complete();
+    }
+}
+
+function complete() {
+    clearInterval(textTimer);
+    textTimer = null;
+}
 
 function startTimer() {
     time = setInterval(runTimer, 10);
@@ -93,6 +119,7 @@ function startGame() {
             playArea.style.display = "block";
             playArea.style.display = "block";
             startTimer();
+            input.focus();
             changeSnippet(snippetIdxArray.shift())
             input.addEventListener('keyup', checkInput, false);
         }
@@ -113,8 +140,9 @@ function playAgain() {
             resultContainer.style.display = "none";
             playArea.style.display = "flex";
             document.querySelector(".timer-container").style.display = "block";
-            changeSnippet(snippetIdxArray.shift());
             restartTimer();
+            input.focus();
+            changeSnippet(snippetIdxArray.shift());
             input.addEventListener('keyup', checkInput, false);
         }
     }
