@@ -70,7 +70,6 @@ function changeSnippet(idx) {
     snippet.innerHTML = Object.values(snippets)[idx].text;
 }
 
-
 function checkInput() {
     let text = input.value;
     const snippetText = document.querySelector("#text-snippet").innerHTML;
