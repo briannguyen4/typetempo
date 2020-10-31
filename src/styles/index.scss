@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  height: 97vh;
+  height: 98vh;
   width: 97vw;
   min-width: 760px;
   min-height: 560px;
@@ -66,6 +66,28 @@ body {
   border-radius: 10px;
 }
 
+#start-container {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.music {
+  height: 152px;
+  position: relative;
+}
+
+.keyboard {
+  height: 176px;
+  transform: rotate(45deg);
+}
+
 #text-snippet {
   font-size: 20px;
 }
@@ -79,6 +101,7 @@ body {
   background-color: rgb(187, 155, 114);
   border: 2.2px solid #a88c6d;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 #play:hover, #playagain:hover {
