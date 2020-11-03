@@ -76,16 +76,19 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  text-align: center;
 }
 
 .music {
-  height: 152px;
+  height: 128px;
   position: relative;
+  right: 20px;
+  transform: rotate(-10deg);
 }
 
 .keyboard {
-  height: 176px;
-  transform: rotate(45deg);
+  height: 168px;
+  transform: rotate(15deg);
 }
 
 #text-snippet {
@@ -93,21 +96,21 @@ body {
 }
 
 #play, #playagain {
-  width: 100px;
+  width: 75%;
   height: 40px;
   font-size: 16px;
   font-weight: 700;
-  color: rgb(121, 93, 56);
+  color: rgb(121, 69, 56);
   background-color: rgb(187, 155, 114);
-  border: 2.2px solid #a88c6d;
+  border: 2.2px solid #a8766d;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #play:hover, #playagain:hover {
-  background-color: rgba(179, 141, 105, 0.89);
-  color: rgb(128, 89, 41);
-  border: 2.2px solid #9b8367;
+  background-color: rgba(180, 141, 105, 0.89);
+  color: rgb(122, 22, 12);
+  border: 2.2px solid #9b7a67;
   box-shadow: none;
 }
 
