@@ -8,6 +8,7 @@ const playArea = document.querySelector("#play-container");
 const resultContainer = document.getElementById("result-container");
 const playAgainButton = document.querySelector("#playagain");
 const header = document.querySelector(".header-text");
+const results = document.querySelector(".results");
 
 let countdown;
 let timeVals = [0, 0, 0, 0];
@@ -159,9 +160,8 @@ function getResults() {
     document.querySelector(".timer-container").style.display = "none";
     resultContainer.style.display = "flex";
     document.querySelector(".words").innerHTML = `Total Words: ${wordTotal}`;
-    document.querySelector(".time").innerHTML = `Time : ${timer.innerHTML}`;
+    document.querySelector(".time").innerHTML = `Time: ${timer.innerHTML}`;
     document.querySelector(".wpm").innerHTML = `WPM : ${calculateWPM()}`;
-
 }
 
 function getTotalSeconds() {

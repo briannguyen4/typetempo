@@ -59,8 +59,9 @@ body {
   width: 85%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 32px;
   background-color: rgb(228, 228, 205);
   border: 3px solid rgba(173, 147, 147, 0.904);
   border-radius: 10px;
@@ -100,6 +101,8 @@ body {
 
 #text-snippet {
   font-size: 20px;
+  padding-left: 20px;
+  font-family: 'Roboto Slab', serif;
 }
 
 #play, #playagain {
@@ -114,6 +117,10 @@ body {
   cursor: pointer;
 }
 
+#playagain {
+  width: 40%;
+}
+
 #play:hover, #playagain:hover {
   background-color: rgba(180, 141, 105, 0.89);
   color: rgb(122, 22, 12);
@@ -126,7 +133,7 @@ body {
   margin-top: 2rem;
   width: 92%;
   height: 120px;
-  font-size: 1rem;
+  font-size: 0.5rem;
   border: 2px solid #d3d3be;
   border-radius: 10px;
   outline: none;
