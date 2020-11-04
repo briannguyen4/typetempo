@@ -161,7 +161,7 @@ function getResults() {
     resultContainer.style.display = "flex";
     document.querySelector(".words").innerHTML = `Total Words: ${wordTotal}`;
     document.querySelector(".time").innerHTML = `Time: ${timer.innerHTML}`;
-    document.querySelector(".wpm").innerHTML = `WPM : ${calculateWPM()}`;
+    document.querySelector(".wpm").innerHTML = `WPM: ${calculateWPM()}`;
 }
 
 function getTotalSeconds() {

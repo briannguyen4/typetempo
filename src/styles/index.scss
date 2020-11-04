@@ -35,7 +35,7 @@ body {
   height: 16%;
   width: 36%;
   background-color: rgb(63, 74, 139);
-  color: rgba(245, 245, 260, 0.911);
+  color: rgba(233, 232, 232, 0.966);
   text-shadow: 1.1px 1.1px rgb(66, 155, 206);
   border: 2.2px solid rgb(163, 157, 187);
   font-family: 'Roboto Slab', serif;
@@ -147,7 +147,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
+}
+
+.decor {
+  height: 64px;
 }
 
 #playagain {
@@ -165,7 +169,7 @@ body {
   justify-content: center;
   width: 11%;
   height: 9%;
-  margin-top: 20px;
+  margin-top: 16px;
   letter-spacing: 3px;
   font-weight: 600;
   border: 2px solid darkslateblue;
