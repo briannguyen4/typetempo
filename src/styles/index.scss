@@ -38,7 +38,7 @@ body {
   color: rgba(245, 245, 260, 0.911);
   text-shadow: 1.1px 1.1px rgb(66, 155, 206);
   border: 2.2px solid rgb(163, 157, 187);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', serif;
   border-radius: 15px;
   margin-bottom: 20px;
   span {
@@ -78,7 +78,12 @@ body {
   padding: 20px;
   text-align: center;
   position: relative;
-  right: 20px;
+  right: 12px;
+  font-family: 'Roboto Slab', serif;
+  line-height: 4px;
+  button {
+    margin-top: 48px;
+  }
 }
 
 .music {
@@ -89,7 +94,7 @@ body {
 }
 
 .keyboard {
-  height: 168px;
+  height: 152px;
   transform: rotate(15deg);
 }
 
