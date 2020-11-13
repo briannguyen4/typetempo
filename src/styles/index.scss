@@ -1,9 +1,13 @@
 body {
   margin: auto;
-  height: 98vh;
-  width: 97vw;
+  height: 99vh;
+  width: 95vw;
   min-width: 760px;
   min-height: 560px;
+}
+
+h2 {
+  margin: 0;
 }
 
 .game-body {
@@ -13,10 +17,30 @@ body {
   background-color: rgb(207, 224, 223);
 }
 
+#info {
+  color: rgb(97, 126, 109);
+  text-shadow: 1.1px 1.1px rgb(162, 223, 187);
+}
+
+.linkedin {
+  height: 30px;
+}
+
 .game-title {
-  font-family: 'Monoton', cursive;
-  font-size: 32px;
+  font-family: 'Bangers', cursive;
+  font-size: 56px;
   text-align: center;
+  margin: 0 0 24px 0;
+  &-top {
+    position: relative;
+    right: 61px;
+    bottom: 24px;
+  }
+  &-bottom {
+    position: relative;
+    bottom: 44px;
+    left: 30px;
+  }
 }
 
 #game-container {
@@ -26,6 +50,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  bottom: 64px;
 }
 
 .header {
@@ -81,7 +107,7 @@ body {
   position: relative;
   right: 12px;
   font-family: 'Roboto Slab', serif;
-  line-height: 4px;
+  line-height: 12px;
   button {
     margin-top: 48px;
   }
@@ -156,11 +182,6 @@ body {
 
 #playagain {
   margin-top: 30px;
-}
-
-#info {
-  color: rgb(97, 126, 109);
-  text-shadow: 1.1px 1.1px rgb(162, 223, 187);
 }
 
 .timer-container {
