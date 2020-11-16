@@ -39,7 +39,7 @@ h2 {
   &-bottom {
     position: relative;
     bottom: 48px;
-    left: 30px;
+    left: 24px;
   }
 }
 
@@ -108,8 +108,11 @@ h2 {
   right: 12px;
   font-family: 'Roboto Slab', serif;
   line-height: 12px;
+  p {
+    margin-bottom: 4px;
+  }
   button {
-    margin-top: 48px;
+    margin-top: 64px;
   }
 }
 
