@@ -18,8 +18,9 @@ h2 {
 }
 
 #info {
-  color: rgb(97, 126, 109);
+  color: rgb(85, 112, 96);
   text-shadow: 1.1px 1.1px rgb(162, 223, 187);
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 .linkedin {
@@ -30,7 +31,7 @@ h2 {
   font-family: 'Bangers', cursive;
   font-size: 56px;
   text-align: center;
-  margin: 0 0 24px 0;
+  margin: 0 0 32px 0;
   &-top {
     position: relative;
     right: 61px;
@@ -106,7 +107,8 @@ h2 {
   text-align: center;
   position: relative;
   right: 12px;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 19px;
   line-height: 12px;
   p {
     margin-bottom: 4px;
@@ -119,12 +121,15 @@ h2 {
 .music {
   height: 128px;
   position: relative;
-  right: 20px;
-  transform: rotate(-10deg);
+  right: 16px;
+  bottom: 16px;
+  transform: rotate(-6deg);
 }
 
 .keyboard {
-  height: 152px;
+  height: 148px;
+  position: relative;
+  right: 20px;
   transform: rotate(15deg);
 }
 
