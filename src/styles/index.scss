@@ -18,13 +18,17 @@ h2 {
 }
 
 #info {
-  color: rgb(85, 112, 96);
+  color: rgb(80, 104, 88);
   text-shadow: 1.1px 1.1px rgb(162, 223, 187);
   font-family: 'Asap Condensed', sans-serif;
+  a {
+    height: 100%;
+  }
 }
 
 .linkedin {
   height: 30px;
+  cursor: pointer;
 }
 
 .game-title {
