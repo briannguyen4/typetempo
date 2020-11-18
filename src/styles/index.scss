@@ -1,7 +1,7 @@
 body {
   margin: auto;
   height: 99vh;
-  width: 95vw;
+  width: 96vw;
   min-width: 760px;
   min-height: 560px;
 }
@@ -14,36 +14,66 @@ h2 {
   height: 100%;
   width: 100%;
   border: 2px solid black;
-  background-color: rgb(207, 224, 223);
+  background-color: rgb(194, 211, 210);
 }
 
-#info {
+.info {
   color: rgb(80, 104, 88);
   text-shadow: 1.1px 1.1px rgb(162, 223, 187);
   font-family: 'Asap Condensed', sans-serif;
-  a {
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    a {
+      color:  rgb(80, 104, 88);
+    }
   }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    &-logos {
+      display: flex;
+      flex-direction: row;
+      width: 68px;
+      justify-content: space-between;
+      a {
+        display: block;
+        height: 32px;
+        width: 32px;
+      }
+    }
+    &-portfolio {
+      position: relative;
+      left: 8px;
+    }
+  } 
 }
 
-.linkedin {
-  height: 30px;
-  cursor: pointer;
+.linkedin, .github {
+  height: 32px;
+  width: 32px;
+}
+
+.github { 
+  margin-right: 20px;
 }
 
 .game-title {
   font-family: 'Bangers', cursive;
   font-size: 56px;
   text-align: center;
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
   &-top {
     position: relative;
-    right: 61px;
-    bottom: 24px;
+    right: 64px;
+    bottom: 32px;
   }
   &-bottom {
     position: relative;
-    bottom: 48px;
+    bottom: 56px;
     left: 24px;
   }
 }
@@ -118,20 +148,20 @@ h2 {
     margin-bottom: 4px;
   }
   button {
-    margin-top: 64px;
+    margin-top: 72px;
   }
 }
 
 .music {
   height: 128px;
   position: relative;
-  right: 16px;
+  right: 8px;
   bottom: 16px;
   transform: rotate(-6deg);
 }
 
 .keyboard {
-  height: 148px;
+  height: 150px;
   position: relative;
   right: 20px;
   transform: rotate(15deg);
@@ -200,9 +230,9 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 11%;
-  height: 9%;
-  margin-top: 16px;
+  width: 9%;
+  height: 7%;
+  margin-top: 6px;
   letter-spacing: 3px;
   font-weight: 600;
   border: 2px solid darkslateblue;
