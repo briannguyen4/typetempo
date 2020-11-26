@@ -127,7 +127,7 @@ export const snippets = {
     },
 
     26: {
-        text: "You are my fire, the one desire. Believe when I say I want it that way",
+        text: "You are my fire, the one desire. Believe when I say I want it that way.",
         title: "I Want It That Way"
     },
 
