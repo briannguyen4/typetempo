@@ -1,180 +1,63 @@
-1. create your new project directory and `cd` into it 
-2. `git init`
-3. create a simple `.gitignore`
-        
-        # .gitignore
+# Type Tempo
+![Type Tempo](https://raw.githubusercontent.com/briannguyen4/briannguyen4.github.io/master/assets/images/typetempo.png)
 
-        /node_modules/
-4. `npm init` and follow prompts
-5. install dev dependencies
-   
-        npm install @babel/core @babel/preset-env autoprefixer babel-loader css-loader fibers file-loader mini-css-extract-plugin node-sass postcss-loader sass sass-loader style-loader url-loader webpack webpack-cli webpack-dev-server webpack-merge --save-dev
+## Background and Overview
 
-6. create basic `/src` subdirectory file structure
+Type Tempo is a game where players are given an assortment of popular song lyrics to type as quickly and accurately as they can. Upon finishing a game, a results screen will appear that indicates various information such as WPM (words per minute) and time elapsed.
 
-        - src/
-            - index.js
-            styles/
-                - index.scss
-            scripts/
+## Functionality and MVPS
 
-7. In your root directory, create `webpack.common.js`
+In Type Tempo, users are able to
 
-    ```JavaScript
-    // webpack.common.js
+- Start a new timed game with random text snippets
+- Type into a text area and get feedback for accuracy 
+- Get results of their typing speed 
 
-    const path = require("path");
-    const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-    const outputDir = "./dist";
+## Architecture and Technology
 
-    module.exports = {
-    entry: path.resolve(__dirname, "src", "index.js"), //
-    output: {
-        path: path.join(__dirname, outputDir),
-        filename: "[name].js",
-        publicPath: "/dist/"
-    },
-    resolve: {
-        extensions: [".js"] // if we were using React.js, we would include ".jsx"
-    },
-    module: {
-        rules: [
-        {
-            test: /\.js$/, // if we were using React.js, we would use \.jsx?$/
-            use: {
-            loader: "babel-loader",
-            options: {
-                presets: ["@babel/preset-env"],
-                plugins: ["@babel/plugin-proposal-optional-chaining"],
-                exclude: /node_modules/
-            } // if we were using React.js, we would include "react"
-            }
-        },
-        {
-            test: /\.css$/,
-            use: [
-            {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                // you can specify a publicPath here
-                // by default it uses publicPath in webpackOptions.output
-                publicPath: "../",
-                hmr: process.env.NODE_ENV === "development"
-                }
-            },
-            "css-loader",
-            "postcss-loader"
-            ]
-        },
-        {
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [
-            {
-                loader: "file-loader",
-                options: {
-                // you can specify a publicPath here
-                // by default it uses publicPath in webpackOptions.output
-                name: "[name].[ext]",
-                outputPath: "images/",
-                publicPath: "images/"
-                }
-            }
-            ]
-        },
-        {
-            test: /\.scss/,
-            use: [
-            {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                // you can specify a publicPath here
-                // by default it uses publicPath in webpackOptions.output
-                publicPath: "../",
-                hmr: process.env.NODE_ENV === "development"
-                }
-            },
-            "css-loader",
-            "sass-loader",
-            "postcss-loader"
-            ]
+The project is implemented with:
+
+- JavaScript for the gaming logic
+- HTML5 and CSS3 for overall layout and styling
+
+In addition to the entry file there will be other scripts in this project.
+The gameplay.js file will have all the information related to general gameplay such as starting a timer and generating the results.  
+The snippets.js file includes all of the text snippets and related functions.
+
+
+## Highlighted Feature
+
+The gameplay of Type Tempo relies on the ability to read input while simultaneously giving feedback back to the player. 
+```javascript
+function checkInput() {
+    let text = input.value;
+    const snippetText = document.querySelector("#text-snippet").innerHTML;
+    let textToMatch = snippetText.substring(0, text.length);
+    if (text == snippetText) {
+        if (snippetIdxArray.length === 0) {
+            endGame();
+        } else {
+            input.style.borderColor = "#d3d3be";
+            let snippet = snippetIdxArray.shift();
+            startRound(snippet);
         }
-        ]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // all options are optional
-        filename: "[name].css",
-        chunkFilename: "[id].css",
-        ignoreOrder: false // Enable to remove warnings about conflicting order
-        }),
-        require("autoprefixer")
-    ]
-    };
-
-    ```
-
-8. Create `webpack.dev.js`
-
-    ```JavaScript
-    // wepack.dev.js
-    const merge = require("webpack-merge");
-    const common = require("./webpack.common.js");
-
-    module.exports = merge(common, {
-        mode: "development",
-        devtool: "inline-source-map",
-        devServer: {
-            contentBase: "./",
-            watchContentBase: true,
-            open: "Google Chrome"
+    } else {
+        if (text == textToMatch) {
+            input.style.borderColor = "green";
+        } else {
+            input.style.borderColor = "red";
         }
-    });
-    ```
+    }
+}
 
-9. Create `webpack.prod.js`
+```
 
-    ```JavaScript
-    // webpack.prod.js
-    const merge = require("webpack-merge");
-    const common = require("./webpack.common.js");
+This function utilizes DOM methods to read a players's typed input and compare it to the current text snippet. Javascript conditionals are then used to change the text area's border color. The color will be green while the player has typed the words accurately while becoming red whenever there are errors.
 
-    module.exports = merge(common, {
-        mode: "production",
-        devtool: "source-map"
-    });
-    ```
 
-10. create `postcss.config.js`
 
-    ```JavaScript
-    // postcss.config.js
-    module.exports = {
-        plugins: {
-            autoprefixer: {}
-        }
-    };
-    ```
 
-11. add `browserlist` key and update `scripts` in `package.json`
+## Bonus Features for future
 
-    ```JavaScript
-    // package.json
-    "browserslist": [
-        "last 1 version",
-        "> 1%",
-        "maintained node versions",
-        "not dead"
-    ],
-    "scripts": {
-        "start": "webpack-dev-server --config webpack.dev.js",
-        "webpack:watch": "webpack --watch --config webpack.dev.js",
-        "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
-    },
-    ```
-
-12. create `index.scss` in `/src/styles`
-
-13. create `index.js` in `/src` directory and import style `/src/styles/index.scss`
-
-14. create `index.html` and import `dist/main.css` and `dist/main.js` appropriately
+- See more information about the snippets such as song information
+- Adding the ability to choose the number of snippets
